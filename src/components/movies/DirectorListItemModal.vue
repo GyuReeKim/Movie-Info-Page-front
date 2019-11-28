@@ -17,7 +17,7 @@
         </div>
         <div class="modal-body">
           <img
-            class="movie--poster my-3"
+            class="movie--poster my-3 mx-auto"
             v-bind:src="movie.poster_url"
             v-bind:alt="movie.title"
             style="width:50%"
