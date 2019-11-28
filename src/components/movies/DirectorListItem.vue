@@ -5,9 +5,7 @@
         <img class="movie--poster my-3" v-bind:src="movie.poster_url" v-bind:alt="movie.title" />
       </div>
     </a>
-    <h4>
-      {{movie.title}}
-    </h4>
+    <h4>{{movie.title}}</h4>
 
     <DirectorListItemModal :movie="movie" :genres="genres" :directors="directors" />
   </div>
@@ -40,7 +38,7 @@ export default {
   width: 200px;
 }
 #img {
-  transition: transform .2s; /* Animation */
+  transition: transform 0.2s; /* Animation */
 }
 #img:hover {
   opacity: 50%;

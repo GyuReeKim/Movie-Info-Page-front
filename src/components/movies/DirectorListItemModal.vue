@@ -7,7 +7,7 @@
     data-backdrop="static"
     data-keypress="false"
   >
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content bg-dark text-white">
         <div class="modal-header">
           <h5 class="modal-title">🎬 {{movie.title}} ({{movie.title_en}})</h5>
@@ -30,15 +30,15 @@
 
           <hr style="background-color:white" />
           <p class="text-center">예고편</p>
-          <div v-if="movie.video_url">
-            <iframe :src="movie.video_url" frameborder="0" style="width:100% ;height:100%;"></iframe>
+          <div v-if="movie.video_url" class="embed-responsive embed-responsive-4by3">
+            <iframe class="embed-responsive-item" :src="movie.video_url" frameborder="0"></iframe>
           </div>
           <div v-else>😱</div>
 
           <hr style="background-color:white" />
           <p class="text-center">OST</p>
-          <div v-if="movie.ost_url">
-            <iframe :src="movie.ost_url" frameborder="0" style="width:100% ;height:100%;"></iframe>
+          <div v-if="movie.ost_url" class="embed-responsive embed-responsive-4by3">
+            <iframe class="embed-responsive-item" :src="movie.ost_url" frameborder="0"></iframe>
           </div>
           <div v-else>😱</div>
         </div>
@@ -74,5 +74,4 @@ export default {
 </script>
 
 <style>
-
 </style>
